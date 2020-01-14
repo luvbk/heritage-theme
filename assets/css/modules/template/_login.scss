@@ -13,7 +13,7 @@
       text-decoration: underline;
 
       &:hover {
-        color: $gray-700; 
+        color: $gray-700;
       }
     }
   }
@@ -45,11 +45,11 @@
       margin-right: 15px;
       margin-left: 0;
 
-      &:first-child {
+      &:nth-child(3) {
         background-color: #3b5998;
       }
 
-      &:last-child {
+      &:nth-child(4) {
         background-color: #d93025;
       }
     }
