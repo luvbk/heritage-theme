@@ -1,9 +1,9 @@
 .path-user {
-  padding: 60px;
+  padding: 40px;
   background-color: white;
 
   .forgot-password {
-    padding-top: 15px;
+    padding-top: 25px;
 
     @extend .txt-size;
 
@@ -36,6 +36,10 @@
     margin-top: 20px;
   }
 
+  #edit-submit {
+    margin-top: 15px;
+  }
+
   a.button {
     margin-top: 15px;
   }
@@ -47,10 +51,18 @@
 
       &:nth-child(3) {
         background-color: #3b5998;
+
+        &:hover {
+          background-color: darken(#3b5998, 20%);
+        }
       }
 
       &:nth-child(4) {
         background-color: #d93025;
+
+        &:hover {
+          background-color: darken(#d93025, 20%);
+        }
       }
     }
   }
