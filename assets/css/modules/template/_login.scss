@@ -2,6 +2,22 @@
   padding: 60px;
   background-color: white;
 
+  .forgot-password {
+    padding-top: 15px;
+
+    @extend .txt-size;
+
+    a {
+      @extend .txt-size;
+      font-weight: bold;
+      text-decoration: underline;
+
+      &:hover {
+        color: $gray-700; 
+      }
+    }
+  }
+
   .dialog-off-canvas-main-canvas {
     & > div:first-child {
       a {
@@ -24,7 +40,7 @@
     margin-top: 15px;
   }
 
-  .region-content {
+  .dialog-off-canvas-main-canvas {
     & > .button {
       margin-right: 15px;
       margin-left: 0;
@@ -56,19 +72,4 @@
     }
   }
 
-  .forgot-password {
-    padding-top: 15px;
-
-    @extend .txt-size;
-
-    a {
-      @extend .txt-size;
-      font-weight: bold;
-      text-decoration: underline;
-
-      &:hover   color: $gray-700;         {
-
-      }
-    }
-  }
 }
