@@ -16,18 +16,27 @@
 
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-base:              #000 !default;
+$gray-base:              #2a2520 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              #333333 !default; 
+$gray-dark:              #333333 !default;
 $gray:                   #8F8F90;
-$gray-light:             #E8E8E8; 
+$gray-light:             #E8E8E8;
 $gray-lighter:           #F0F0F0;
 
 // Main colour palette
 
-$white            : #fff;
-$black            : #000;
-$grey             : $gray-light;
+$white:    #fff !default;
+$gray-100: #E9E7E7 !default;
+$gray-200: #e9ecef !default;
+$gray-300: #4A4A4A !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #9B9B9B !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+$grey             : $gray-700;
 
 $darkbrown :  #3b1a00;
 $brown :        #562821;
@@ -42,7 +51,7 @@ $blue-light       : #CFEAFF;
 
 
 // Assign colours to variable roles
-// Be descriptive without being specific. 
+// Be descriptive without being specific.
 // This allows for consistency project to project, and easy changing
 
 $body-color       : $white;
@@ -70,30 +79,31 @@ $link-hover-decoration: underline !default;
 // ------------------------------------------------------------
 
 // Greek alphabet naming system. Obscure, yet hierarchical.
-// Allows us to avoid naming based on html object. 
+// Allows us to avoid naming based on html object.
 // Eg. A h1 can be smaller visually, than a h4.
 
-$big-cta    : 96px; // Big CTA
-$big-cta-height    : 96px;
-$alpha    : 64px; // H1 // H2 bis
-$alpha-height    : 60px;
-$beta     : 48px; // H2 
-$beta-height     : 48px; 
-$gamma    : 36px; // h3
-$gamma-height    : 36px;
-$delta    : 26px; // h4
-$delta-height    : 26px;
+// Greek alphabet naming system. Obscure, yet hierarchical.
+// Allows us to avoid naming based on html object.
+// Eg. A h1 can be smaller visually, than a h4.
+$alpha    : 56px; //
+$alpha-height    : 68px;
+$beta     : 36px; //
+$beta-height     : 38px;
+$gamma    : 30px; //
+$gamma-height    : 30px;
+$delta    : 28px; //
+$delta-height    : 32px;
 $epsilon  : 22px; //
-$epsilon-height  : 27px; 
-$zeta     : 20px; // Menu 
-$zeta-height     : 22px; 
-$eta      : 18px; // Paragraph
-$eta-height      : 24px;
-$theta    : 16px; // Paragraph Small
-$theta-height    : 24px; 
-$iota     : 14px; // Language switcher // small-quote
-$iota-height     : 18px;
-$kappa    : 10px; // 
+$epsilon-height  : 27px;
+$zeta     : 18px; //
+$zeta-height     : 20px;
+$eta      : 16px; //
+$eta-height      : 18px;
+$theta    : 12px; // paragraph
+$theta-height    : 16px;
+$iota     : 11px; //
+$iota-height     : 13px;
+$kappa    : 10px; //
 $kappa-height    : 12px;
 
 $para     : $theta; // Paragraph size
@@ -103,7 +113,7 @@ $quote    : $beta;  // Quote size
 
 // ------------------------------------------------------------
 // :: Navigation
-// ------------------------------------------------------------ 
+// ------------------------------------------------------------
 
 $main-nav-height-mobile		: 60px; // same as minimized header
 $main-nav-height			: 40px;
@@ -114,15 +124,15 @@ $main-nav-height			: 40px;
 
 $padding-xlarge   : 60px;
 $padding-large    : 40px;
-$padding-default  : 20px;
-$padding-small    : 10px;
+$padding-default  : 30px;
+$padding-small    : 15px;
 $padding-xsmall   : 5px;
 
 // ------------------------------------------------------------
 // :: Border widths
 // ------------------------------------------------------------
 
-$default-border-width         : 2px; 
+$default-border-width         : 2px;
 
 // ------------------------------------------------------------
 // :: Breakpoints
@@ -137,8 +147,8 @@ $grid-breakpoints: (
   xs: 0,
   sm: 768px,
   md: 992px,
-  lg: 1180px,
-  xl: 1440px
+  lg: 1200px,
+  xl: 1500px
 ) ;
 
 
@@ -149,11 +159,10 @@ $grid-breakpoints: (
 
 $container-max-widths: (
   sm: 720px,
-  md: 900px,
+  md: 960px,
   lg: 960px,
   xl: 960px
 ) ;
-
 
 // Grid columns
 //
@@ -168,8 +177,8 @@ $grid-gutter-width:           20px !default;
 //$start-columns            : $b-vp;
 
 
-// ------------------------------------------------------------ 
-// Add functional stuff 
-// ------------------------------------------------------------ 
+// ------------------------------------------------------------
+// Add functional stuff
+// ------------------------------------------------------------
 
 @import "functions/functions";

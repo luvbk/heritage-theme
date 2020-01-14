@@ -19,11 +19,11 @@ input.button, a.button, button, .btn-style {
 	text-decoration:none;
 	padding: 4px 20px 4px 20px;
 	margin-top: $padding-default;
-	font-size: 40px;
+	@extend .txt-size;
 	text-transform: uppercase;
 	border: none;
 	color: white;
-	background-color: $gray-dark;
+	background-color: $gray-300;
 	position: relative;
 	background-image: none;
 	background-repeat: no-repeat;
@@ -31,7 +31,7 @@ input.button, a.button, button, .btn-style {
 	background-position: left top;
 
 	&:hover {
-		background-image: url(images/icons/triangle.svg);
+		background-color: $gray-base;
 	}
 
 
@@ -41,4 +41,3 @@ input.button, a.button, button, .btn-style {
 
 
 }
-

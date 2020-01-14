@@ -9,9 +9,9 @@ input[type="text"] {
 /* Change Autocomplete styles in Chrome*/
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
-input:-webkit-autofill, 
+input:-webkit-autofill,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover
 textarea:-webkit-autofill:focus,
@@ -35,15 +35,15 @@ input[type="text"], textarea, input[type="search"], input[type="email"], input[t
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
     z-index: 1;
-    border: 3px solid $gray;
-    color: $gray;
+    border: 1px solid $gray-base;
+    color: $gray-base;
     max-width: 340px;
     background-color: transparent;
-    height: 48px;
-    line-height: 48px;
+    height: 30px;
+    line-height: 30px;
     padding: 5px 10px;
     width: 100%;
-    font-size: $iota;
+    font-size: $theta;;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -128,7 +128,7 @@ textarea {
 	[type="checkbox"] + label, [type="checkbox"] + label {
 		margin-right: 15px;
 	}
-	 
+
 	/* on prépare le label */
 	[type=radio]:not(:checked) + label,
 	[type=radio]:checked + label,
@@ -219,7 +219,7 @@ textarea {
 			border: none;
 			border-bottom: 2px solid $gray-base;
 			color: $gray-base !important;
-			letter-spacing: 0 !important;		
+			letter-spacing: 0 !important;
 			background: transparent;
 
 			@media only screen and (max-width: 991px) {
@@ -256,7 +256,7 @@ textarea {
 		width: 42px;
 
 		input {
-			
+
 			padding: 0;
 			height: 40px;
 			width: 38px;
@@ -288,13 +288,4 @@ textarea {
 		}
 	}
 
-}
-
-#mc_embed_signup input.mce_inline_error {
-    border-color: $secondary-color !important;
-}
-
-#mc_embed_signup div.mce_inline_error {
-	margin-top: -28px  !important;
-	background-color: $secondary-color !important;
 }
