@@ -1,0 +1,84 @@
+
+// ------------------------------------------------------------
+// :: General Style
+// ------------------------------------------------------------
+
+
+div[class*='col-'] {
+    word-break:break-word;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: ".";    
+    display: block;    
+    height: 0; 
+    opacity: 0;   
+    overflow: hidden; 
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; } /* IE < 8 */
+
+.v-align-start { margin-bottom: auto; }
+.v-align-center { margin: auto auto;}
+.v-align-end { margin-top : auto; }
+
+.twoColumns {
+
+    column-count: 0;
+    column-gap: 0;
+
+    @include media-breakpoint-up(sm) {
+        column-count: 2;
+        column-gap: 30px;        
+    }
+
+    & > div {
+        break-inside: avoid;
+        /* Pour Firefox : */
+          page-break-inside: avoid;
+          /* Pour WebKit : */
+          -webkit-column-break-inside: avoid;
+    }
+
+    p {
+        break-inside: avoid;
+        /* Pour Firefox : */
+          page-break-inside: avoid;
+          /* Pour WebKit : */
+          -webkit-column-break-inside: avoid;
+    }
+}
+
+.column-break {
+    break-after: column;
+}
+
+.clearer {
+    clear: both;
+}
+
+
+// ------------------------------------------------------------
+// :: Header
+// ------------------------------------------------------------
+
+
+
+// Define the top padding for the main content depending on the header height
+
+.main-content-wrapper {
+    position: relative;
+    outline: transparent;
+    padding-top: 60px;
+    // margin-top: 100px; 
+
+    //  @include media-breakpoint-up(md) {
+    //     margin-top: 200px;       
+    // }
+}
+
+
+
+

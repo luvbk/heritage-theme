@@ -1,0 +1,20 @@
+# Frontend Config
+# @author: Jérémie Anderlin <jeremie@inphoenity.com>
+
+name: Frontend
+type: theme
+base theme: classy
+core: 8.x
+
+libraries:
+  - frontend/global-styling
+  - frontend/global-scripting
+  - frontend/fonts
+
+regions:
+  header: Page Header
+  navigation: Navigation
+  search: search
+  content: Content
+  sidebar: Sidebar
+  footer: Page Footer

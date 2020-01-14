@@ -1,0 +1,28 @@
+{#
+  * Template - Page : Page
+  * @author Jérémie Anderlin <jeremie@inphoenity.com>
+#}
+
+
+<header id="header" class="">
+
+	{% include '@frontend/partials/header.html.twig' %}
+
+	{% include '@frontend/partials/navigation.html.twig' %}
+
+</header>
+
+{% include '@frontend/partials/search.html.twig' %}
+
+
+<main class="main-content">
+	<!-- Main-Content -->
+	{{ page.content }}
+	<!-- /Main-Content -->
+
+
+</main>
+
+{% include '@frontend/partials/footer.html.twig' %}
+
+

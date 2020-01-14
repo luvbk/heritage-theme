@@ -1,0 +1,205 @@
+.element-invisible {display:none;}
+.messages.error {margin-bottom:1em;}
+
+.not-logged-in main > .messages {display:none;}
+
+.form-item, .form-actions {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.visually-hidden {
+	width: 0;
+	display:block;
+	visibility:hidden;
+	height:0px;
+}
+.block--views .contextual-links-wrapper, .block--block .contextual-links-wrapper, .block .contextual-links-wrapper {display:none !important;}
+
+
+.file img {display:none;}
+
+#admin-menu {display:none;}
+
+.slicknav_menu {
+    display: none;
+}
+
+#header {
+	.contextual-links-wrapper {
+		display: none;
+	}
+}
+
+.main-nav .contextual-links-wrapper {
+	display: none;
+}
+
+.contextual-links {
+	position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px;
+    background-color: white;
+    z-index: 3000;
+
+	li {
+		display: inline-block;
+	    margin-right: 10px;
+
+	    a {
+	    	font-weight: 600;
+	    	text-transform: uppercase;
+	    	letter-spacing: 1px;
+	    	display: block;
+	    	width: 100%;
+	    	padding: 7px 15px;
+	    }
+
+	    &.edit, &.translate {
+			background-color: transparent;
+			border: 3px solid red;
+			
+			a {
+				color: red;
+			}
+
+			&:hover {
+				background-color: red;
+				a {
+					color: white;
+				}
+
+			}
+	    }
+
+	    &.dashboard {
+	    	background-color: transparent;
+			border: 3px solid blue;
+			margin-right: 0;
+
+			a {
+				color: blue;
+			}
+
+			&:hover {
+				background-color: blue;
+				a {
+					color: white;
+				}
+			}
+	    }
+	}
+}
+
+// Cookie
+
+.cookie-pop {
+    background-color: $primary-color;
+    color: white;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    z-index: 400;
+    padding:5px;
+    font-size:14px;
+    min-height: 40px;
+    line-height:18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+    a {color:white;text-decoration:underline !important;
+
+    	&:hover {
+			color: white;
+    	}
+    }
+}
+.cookie-pop button.bouton {
+    margin: 10px 10px 10px 20px;
+    padding: 5px 7px 5px 5px;
+    font-size: 12px;
+    background-color:transparent;
+    border:1px solid white;
+    font-weight: bold;
+    color:white;
+    transition: all .2s ease;
+    @extend .font-body;
+    font-weight: normal;
+
+    &:hover {
+		background-color: $primary-color;
+		color: white;
+    }
+}
+
+.contextual-links {
+	position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px;
+    background-color: white;
+    z-index: 3000;
+
+	li {
+		display: inline-block;
+	    margin-right: 10px;
+
+	    a {
+	    	font-weight: 600;
+	    	text-transform: uppercase;
+	    	letter-spacing: 1px;
+	    	display: block;
+	    	width: 100%;
+	    	padding: 7px 15px;
+	    }
+
+	    &.edit, &.translate {
+			background-color: transparent;
+			border: 3px solid red;
+			
+			a {
+				color: red;
+			}
+
+			&:hover {
+				background-color: red;
+				a {
+					color: white;
+				}
+
+			}
+	    }
+
+	    &.dashboard {
+	    	background-color: transparent;
+			border: 3px solid blue;
+			margin-right: 0;
+
+			a {
+				color: blue;
+			}
+
+			&:hover {
+				background-color: blue;
+				a {
+					color: white;
+				}
+			}
+	    }
+	}
+}
+.form-item__required-marker:before {content:"*";color:red;}
+
+#block-frontend-local-tasks {
+	@extend .container;
+}
+
+.i18n-fr .form-wrapper form:after {content:"Les champs marqués d'un astérisque (*) sont obligatoires";color:red;}
+.i18n-nl .form-wrapper form:after {content:"De velden met een asterisk (*) moet u invullen";color:red;}
+.i18n-en .form-wrapper form:after {content:"Fields with a * are required";color:red;}

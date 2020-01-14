@@ -1,0 +1,33 @@
+# Breakpoints
+# @author: Jérémie Anderlin <jeremie@inphoenity.com>
+
+frontend.xs:
+  label: XS
+  mediaQuery: 'only screen'
+  weight: 4
+  multipliers:
+    - 1x
+frontend.sm:
+  label: SM
+  mediaQuery: 'only screen'
+  weight: 3
+  multipliers:
+    - 1x
+frontend.md:
+  label: MD
+  mediaQuery: 'only screen'
+  weight: 2
+  multipliers:
+    - 1x
+frontend.lg:
+  label: LG
+  mediaQuery: 'only screen'
+  weight: 1
+  multipliers:
+    - 1x
+frontend.xl:
+  label: XL
+  mediaQuery: 'only screen'
+  weight: 0
+  multipliers:
+    - 1x

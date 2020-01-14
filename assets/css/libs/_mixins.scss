@@ -1,0 +1,328 @@
+// ------------------------------------------------------------
+// Mixins
+// ------------------------------------------------------------
+
+
+// ------------------------------------------------------------
+// calculate px and percent
+// ------------------------------------------------------------
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+
+// -------------------------------------------------------
+// List styles
+// -------------------------------------------------------
+
+// Mixins for list style types
+@mixin unordered {
+  list-style-position: outside; 
+  list-style-type: disc;
+}
+
+@mixin unordered-inside {
+  list-style-position: inside; 
+  list-style-type: disc;
+}
+
+@mixin ordered {
+	list-style-position: outside; 
+	list-style-type: decimal;
+}
+
+@mixin ordered-inside {
+	list-style-position: inside; 
+	list-style-type: decimal;
+}
+
+@mixin nobullet {
+	list-style-type: none;
+}
+
+// -------------------------------------------------------
+// Transitions
+// -------------------------------------------------------
+
+
+
+// -------------------------------------------------------
+// Link hover styles
+// -------------------------------------------------------
+
+@mixin link-active-styles {
+	&:hover, &:focus, &:active {
+		@content; 
+	}
+}
+
+
+// -------------------------------------------------------
+// Align things vertically (http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/)
+// -------------------------------------------------------
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin vertical-align-transition($height) {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(- $height);
+  -ms-transform: translateY(- $height);
+  transform: translateY(- $height);
+}
+
+
+
+// -------------------------------------------------------
+// Media queries
+// -------------------------------------------------------
+
+
+// Reference widths from settings file
+@mixin respond-to($media-min, $IE9: true) {
+  @if $IE9 == true {
+    .lt-ie9 & {
+      @content;
+    }
+    @media screen and (min-width: $media-min)  {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-width: $media-min) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to-max($media-max, $IE9: true) {
+  @if $IE9 == true {
+    .lt-ie9 & {
+      @content;
+    }
+    @media screen and (max-width: $media-max - 1px)  {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (max-width: $media-max - 1px) {
+      @content;
+    }
+  }
+}
+
+
+@mixin respond-to-min-max($media-min, $media-max, $IE9: true) {
+  @if $IE9 == true {
+    .lt-ie9 & {
+      @content;
+    }
+    @media screen and (min-width: $media-min) and (max-width: $media-max)  {
+      @content;
+    }
+  }
+  @else {
+   @media screen and (min-width: $media-min) and (max-width: $media-max) {
+    @content;
+  }
+}
+}
+
+
+// -------------------------------------------------------
+// Retina images
+// -------------------------------------------------------
+
+// Usage: Send path, image name, and width and height. 
+// Name retina images [name]2x.
+
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+// -------------------------------------------------------
+// HEX to RGB
+// -------------------------------------------------------
+
+// http://codepen.io/sturobson/pen/hdKyv
+@mixin rgba($color, $value) {
+	background-color: $color;
+	background-color: rgba($color, $value);
+}
+
+
+// -------------------------------------------------------
+// Grid
+// -------------------------------------------------------
+
+@mixin container-fluid-width {
+    padding-left: $container-padding*2 !important;
+    padding-right: $container-padding*2 !important; 
+
+  @media (min-width: 768px) {
+    padding-left: $container-padding !important;
+    padding-right: $container-padding !important;   
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: $container-padding*1.5 !important;
+    padding-right: $container-padding*1.5 !important;    
+  }
+
+  @media (min-width: 2000px) {
+    padding-left: $container-padding*2 !important;
+    padding-right: $container-padding*2 !important;    
+  }
+
+}
+
+@mixin container-fluid-width-left {
+    padding-left: $container-padding*2 !important;
+
+  @media (min-width: 768px) {
+    padding-left: $container-padding !important;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: $container-padding*1.5 !important;    
+  }
+
+  @media (min-width: 2000px) {
+    padding-left: $container-padding*2 !important;    
+  }
+
+}
+
+@mixin container-fluid-width-right {
+    padding-right: $container-padding*2 !important; 
+
+  @media (min-width: 768px) {
+    padding-right: $container-padding !important;   
+  }
+
+  @media (min-width: 1440px) {
+    padding-right: $container-padding*1.5 !important;    
+  }
+
+  @media (min-width: 2000px) {
+    padding-right: $container-padding*2 !important;    
+  }
+
+}
+
+@mixin col-height ($xs-height, $sm-height, $md-height, $lg-height, $xl-height) {
+  @extend .equal;
+  & >div[class*='col-'] {
+       /* Small devices (small-device, less than 768px) */
+    @media (min-width: $screen-xs-min) {
+      min-height: $xs-height; 
+    }
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: $screen-sm-min) { 
+      min-height: $sm-height;
+    }
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: $screen-md-min) {
+      min-height: $md-height;
+     }
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: $screen-lg-min) { 
+      min-height: $lg-height;
+    }
+    /* Extra-Large devices (large desktops, 1600px and up) */
+    @media only screen and (min-width : 1600px) { 
+      min-height: $xl-height;
+    }
+  }
+}
+
+@mixin col-vertical-padding ($xs-h-padding, $sm-h-padding, $md-h-padding, $lg-h-padding, $xl-h-padding) {
+
+  & >div[class*='col-'] {
+        /* Small devices (small-device, less than 768px) */
+    @media (min-width: $screen-xs-min) {
+      padding-top: $xs-h-padding;
+      padding-bottom: $xs-h-padding;
+     }
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: $screen-sm-min) { 
+      padding-top: $sm-h-padding;
+      padding-bottom: $sm-h-padding;
+    }
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: $screen-md-min) { 
+      padding-top: $md-h-padding;
+      padding-bottom: $md-h-padding;
+    }
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: $screen-lg-min) { 
+      padding-top: $lg-h-padding;
+      padding-bottom: $lg-h-padding;
+    }
+    /* Extra-Large devices (large desktops, 1600px and up) */
+    @media only screen and (min-width : 1600px) { 
+      padding-top: $xl-h-padding;
+      padding-bottom: $xl-h-padding;
+    }
+
+  }
+}
+
+@mixin vertical-padding ($xs-h-padding, $sm-h-padding, $md-h-padding, $lg-h-padding, $xl-h-padding) {
+
+    /* Small devices (small-device, less than 768px) */
+    @media (min-width: $screen-xs-min) {
+      padding-top: $xs-h-padding;
+      padding-bottom: $xs-h-padding;
+     }
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: $screen-sm-min) { 
+      padding-top: $sm-h-padding;
+      padding-bottom: $sm-h-padding;
+    }
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: $screen-md-min) { 
+      padding-top: $md-h-padding;
+      padding-bottom: $md-h-padding;
+    }
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: $screen-lg-min) { 
+      padding-top: $lg-h-padding;
+      padding-bottom: $lg-h-padding;
+    }
+    /* Extra-Large devices (large desktops, 1600px and up) */
+    @media only screen and (min-width : 1600px) { 
+      padding-top: $xl-h-padding;
+      padding-bottom: $xl-h-padding;
+    }
+
+}
+
+@mixin simple-vertical-padding($t-padding, $b-padding) {
+  padding-top: $t-padding;
+  padding-bottom: $b-padding;
+}
+
+
+// Generate columns names span-#
+// Called by: @include grid_columns(#) where # is the amount of columns needed
+// Perfect for use in breakpoints to use different columns
+
+//Deleted

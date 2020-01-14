@@ -1,0 +1,300 @@
+input {
+	border-style: solid;
+}
+
+input[type="text"] {
+	width: 100%;
+}
+
+/* Change Autocomplete styles in Chrome*/
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $gray;
+  -webkit-box-shadow: 0 0 0 30px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+  appearance: none;
+  box-shadow: none;
+}
+
+
+input[type="text"], textarea, input[type="search"], input[type="email"], input[type="password"] {
+	appearance: none;
+	box-shadow: none;
+	outline: 1px solid transparent;
+	border-radius: 0;
+	-webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    border: 3px solid $gray;
+    color: $gray;
+    max-width: 340px;
+    background-color: transparent;
+    height: 48px;
+    line-height: 48px;
+    padding: 5px 10px;
+    width: 100%;
+    font-size: $iota;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $gray-base;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $gray-base;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $gray-base;
+}
+
+@media only screen and (min-width : 768px) {
+
+	select {
+		display: none;
+	}
+
+}
+
+form {
+	& > div {
+		margin-bottom: $padding-default;
+	}
+	.views-widget__label {
+
+	}
+}
+
+select {
+	appearance: none;
+	box-shadow: none;
+	outline: 1px solid transparent;
+	border: 2px solid $gray-base;
+	background-color: white;
+	color: $gray-base;
+	border-radius: 0;
+	min-width: 320px;
+	max-width: 450px;
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	background-image: url(images/icons/arrow-down-black.svg);
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	background-size: 15px;
+}
+
+textarea {
+		background-color: transparent;
+		padding: 0;
+		border: 3px solid $gray;
+		color: $gray;
+		width: 100%;
+		background: white;
+		appearance: none;
+		box-shadow: none;
+		 font-size: $iota;
+		 line-height: $iota-height;
+	}
+
+	.form-item--radio, .form-item--checkbox {
+		margin-bottom: $padding-xsmall;
+
+		label:hover {
+			opacity: .5;
+		}
+	}
+
+	/* Cachons la case à cocher */
+	[type=radio]:not(:checked),
+	[type=radio]:checked,
+	[type="checkbox"]:not(:checked),
+	[type="checkbox"]:checked {
+	  position: absolute;
+	  left: -9999px;
+	}
+
+	[type="checkbox"] + label, [type="checkbox"] + label {
+		margin-right: 15px;
+	}
+	 
+	/* on prépare le label */
+	[type=radio]:not(:checked) + label,
+	[type=radio]:checked + label,
+	[type="checkbox"]:not(:checked) + label,
+	[type="checkbox"]:checked + label {
+	  position: relative; /* permet de positionner les pseudo-éléments */
+	  padding-left: 20px; /* fait un peu d'espace pour notre case à venir */
+	  cursor: pointer;    /* affiche un curseur adapté */
+	}
+
+		/* Aspect des checkboxes */
+	/* :before sert à créer la case à cocher */
+	[type=radio]:not(:checked) + label:before,
+	[type=radio]:checked + label:before ,
+	[type="checkbox"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before {
+	  content: '';
+	  position: absolute;
+	  left:0; top: 6px;
+	  width: 10px; height: 10px; /* dim. de la case */
+	  border: 1px solid $gray-base;
+	  background: transparent;
+
+	}
+
+	/* Aspect si "cochée" */
+	[type=radio]:checked + label:before , [type="checkbox"]:checked + label:before {
+	  background: $gray-base;
+	}
+
+
+.blue.bgcolor {
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	    color: white;
+	    opacity: 1; /* Firefox */
+	}
+
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	    color: white;
+	}
+
+	::-ms-input-placeholder { /* Microsoft Edge */
+	    color: white;
+	}
+
+	input[type="text"], textarea, input[type="search"], input[type="email"] {
+		border-bottom: 2px solid $white;
+    	color: $white;
+	}
+
+	form {
+		.views-widget__label {
+			color: white;
+		}
+	}
+
+	textarea {
+		border: 2px solid white;
+	}
+
+	[type=radio]:not(:checked) + label:before,
+	[type=radio]:checked + label:before ,
+	[type="checkbox"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before {
+		border: 1px solid white;
+	}
+
+	/* Aspect si "cochée" */
+	[type=radio]:checked + label:before , [type="checkbox"]:checked + label:before {
+	  background: white;
+	}
+}
+
+
+// Header search
+
+.header-search {
+
+	.container-inline {
+		position: relative;
+	}
+
+	.form-item--search-block-form {
+		width: calc(100% - 42px);
+
+		input {
+			height: 40px;
+			border: none;
+			border-bottom: 2px solid $gray-base;
+			color: $gray-base !important;
+			letter-spacing: 0 !important;		
+			background: transparent;
+
+			@media only screen and (max-width: 991px) {
+				border-bottom: 2px solid white;
+			}
+
+			&:focus {
+				border: none;
+				border-bottom: 2px solid $secondary-color;
+				outline: none;
+
+				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				  color: $gray-base !important;
+				}
+				::-moz-placeholder { /* Firefox 19+ */
+				  color: $gray-base !important;
+				}
+				:-ms-input-placeholder { /* IE 10+ */
+				  color: $gray-base !important;
+				}
+				:-moz-placeholder { /* Firefox 18- */
+				  color: $gray-base !important;
+				}
+			}
+		}
+
+	}
+
+	.form-actions {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+		width: 42px;
+
+		input {
+			
+			padding: 0;
+			height: 40px;
+			width: 38px;
+			background: url('images/icons/search.svg') no-repeat;
+			background-size: 25px;
+			background-position: bottom right;
+			border: none;
+			text-indent: -9999px;
+			margin-top: 0;
+
+			@media only screen and (max-width: 991px) {
+				background: url('images/icons/search-white.svg') no-repeat;
+				background-size: 25px;
+				background-position: bottom right;
+
+				&:hover {
+					background: url('images/icons/search-white.svg') no-repeat;
+					background-size: 25px;
+					background-position: bottom right;
+				}
+			}
+
+
+			&:hover {
+				background: url('images/icons/search-hover.svg') no-repeat;
+				background-size: 25px;
+				background-position: bottom right;
+			}
+		}
+	}
+
+}
+
+#mc_embed_signup input.mce_inline_error {
+    border-color: $secondary-color !important;
+}
+
+#mc_embed_signup div.mce_inline_error {
+	margin-top: -28px  !important;
+	background-color: $secondary-color !important;
+}

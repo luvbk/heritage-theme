@@ -1,0 +1,8 @@
+﻿# ###########
+# GitIgnore #
+# ###########
+
+# Ignore Yarn Packages (devDependencies).
+node_modules
+
+# ###########

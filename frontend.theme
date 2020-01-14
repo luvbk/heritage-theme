@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Frontend.Theme
+ * @author Jérémie Anderlin <jeremie@inphoenity.com>
+ */
+
+function frontend_preprocess_page(&$variables) {
+  $variables['inphoenity_dev_name'] = 'Jérémie Anderlin';
+}
+
+function frontend_preprocess_links__language_block(&$variables) {
+  $links = &$variables['links'];
+  foreach ($links as $langCode => &$link) {
+    $link['text'] = $langCode;
+    $link['link']['#title'] = $langCode;
+  }
+}

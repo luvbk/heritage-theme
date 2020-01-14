@@ -1,0 +1,21 @@
+# List of Libraries
+# @author: Jérémie Anderlin <jeremie@inphoenity.com>
+
+# Frontend Global CSS
+global-styling:
+  css:
+    theme:
+      assets/css/style.css: {}
+
+# Frontend Global JS
+global-scripting:
+  js:
+    assets/js/dist/scripts.js: {}
+  dependencies:
+    - core/jquery
+
+# Fonts
+fonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Archivo:400,400i,700,700i': { type: external }

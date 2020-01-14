@@ -1,0 +1,44 @@
+@mixin mybutton($color, $txt-color) {
+	display: inline-block;
+	text-decoration:none;
+	padding: 8px 14px 10px 14px;
+	background-color:transparent;
+	margin-top: $padding-default;
+	font-size: $eta;
+	border: 2px solid $color;
+	color: $color;
+
+	&:hover {
+		color: $txt-color;
+		background-color: $color;
+	}
+}
+
+input.button, a.button, button, .btn-style {
+	display: inline-block;
+	text-decoration:none;
+	padding: 4px 20px 4px 20px;
+	margin-top: $padding-default;
+	font-size: 40px;
+	text-transform: uppercase;
+	border: none;
+	color: white;
+	background-color: $gray-dark;
+	position: relative;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-position: left top;
+
+	&:hover {
+		background-image: url(images/icons/triangle.svg);
+	}
+
+
+	&:focus {
+		outline: none;
+	}
+
+
+}
+

@@ -1,0 +1,8 @@
+# Schema for the configuration files of the Frontend theme.
+frontend.settings:
+  type: theme_settings
+  label: 'Frontend settings'
+  mapping:
+    shortcut_module_link:
+      type: boolean
+      label: 'Shortcut module link'

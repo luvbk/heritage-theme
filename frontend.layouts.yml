@@ -1,0 +1,44 @@
+# Custom Layouts
+# @author: Jérémie Anderlin <jeremie@inphoenity.com>
+
+# Reset Layout
+reset:
+  label    : Reset
+  category : BAV
+  template : templates/layouts/reset/reset
+  icon     : templates/layouts/reset/preview-reset.png
+  regions:
+    main:
+      label: Main
+
+# Top-Sidebar-Main-Bottom
+top_sidebar_main_bottom:
+  label    : Top-Sidebar-Main-Bottom
+  category : BAV
+  template : templates/layouts/top-sidebar-main-bottom/top-sidebar-main-bottom
+  icon     : templates/layouts/top-sidebar-main-bottom/preview-top-sidebar-main-bottom.png
+  regions:
+    top:
+      label: Top
+    sidebar:
+      label: Sidebar
+    main:
+      label: Main
+    bottom:
+      label: Bottom
+
+# Top-Main-Sidebar-Bottom
+top_main_sidebar_bottom:
+  label    : Top-Main-Sidebar-Bottom
+  category : BAV
+  template : templates/layouts/top-main-sidebar-bottom/top-main-sidebar-bottom
+  icon     : templates/layouts/top-main-sidebar-bottom/preview-top-main-sidebar-bottom.png
+  regions:
+    top:
+      label: Top
+    main:
+      label: Main
+    sidebar:
+      label: Sidebar
+    bottom:
+      label: Bottom
