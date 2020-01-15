@@ -11,10 +11,11 @@ ul.menu {
 
 
 #block-marquedusite {
-  font-size: 26px;
+  font-size: 28px !important;
+  line-height: 30px !important;
   font-weight: bold;
-  color: $gray-base;
-  margin-bottom: 30px;
+  color: $gray-base !important;
+  margin-bottom: 25px;
 }
 
 .region-content > .menu--account {
