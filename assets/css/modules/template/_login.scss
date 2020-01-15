@@ -172,23 +172,17 @@
 
   .inventaire {
     text-transform: uppercase;
+    margin-bottom: 5px;
   }
 
-  .teaser-info {
-    padding-top: 5px;
-  }
+
 
   .teaser-link {
     display: flex;
 
     .object-img {
-      width: 60px;
-      height: 60px;
-      background-repeat: no-repeat;
-      background-size: cover;
+      width: 100px;
       margin-right: 20px;
-      background-color: $gray-200;
-      background-position: center;
     }
 
     h3 {
