@@ -164,3 +164,19 @@
     display: none;
   }
 }
+
+.like-teaser {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $gray-700;
+
+  a {
+    h3 {
+      color: inherit;
+    }
+
+    &:hover {
+      color: $gray-base;
+    }
+  }
+}
