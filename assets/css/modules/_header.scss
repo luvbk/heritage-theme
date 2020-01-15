@@ -73,25 +73,26 @@ ul.menu {
         display: inline-block;
         padding: 10px;
         margin: 0 auto;
-        min-height: 100px;
+        min-height: 74px;
         text-align: center;
         font-size: 10px;
         font-weight: bold;
         position: relative;
+        padding-top: 38px;
 
         &:before {
           content: "";
-          display: flex;
-          padding: 10px;
+          position: absolute;
+          top: 10px;
           margin: 0 auto;
-          min-height: 74px;
-          text-align: center;
-          font-size: 10px;
-          font-weight: bold;
-          position: relative;
-          padding-top: 38px;
-          justify-content: center;
-          width: auto;
+          width: 35px;
+          height: 21px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          background-size: auto 21px;
+          background-repeat: no-repeat;
+          background-position: top center;
         }
       }
     }
