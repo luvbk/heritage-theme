@@ -19,13 +19,31 @@
   }
 
 
-  .login-btn {
-      padding-bottom: 15px;
-      border-bottom: 1px solid $gray-700;
+  .login-btn-wrapper {
+      padding-top: 15px;
+      border-top: 1px solid $gray-700;
+
+      h4 {
+        @extend .small-size;
+      }
+
       a {
-        @extend .txt-size-2;
+        @extend .h3;
         text-decoration: underline;
         font-weight: bold;
+        position: relative;
+
+        &.login-btn {
+          &:before {
+            content: "→";
+          }
+        }
+
+        &.sign-up-btn {
+          &:before {
+            content: "←";
+          }
+        }
 
         &:hover {
             color: $gray-700;
