@@ -9,3 +9,11 @@ a {
 img.svg {
 	display: none;
 }
+
+.messages--status {
+	margin-bottom: 20px;
+	box-shadow: none;
+	border: 1px solid #77b259;
+	background-color: transparent;
+	@extend .txt-size;
+}
