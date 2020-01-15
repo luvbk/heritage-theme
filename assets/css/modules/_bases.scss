@@ -25,3 +25,14 @@ img.svg {
 #block-marquedusite {
 	@extend .h3;
 }
+
+body {
+	background-color: $gray-base;
+
+	.main-content {
+		margin-top: 150px;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 600px;
+	}
+}
