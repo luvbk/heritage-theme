@@ -158,3 +158,9 @@
   }
 
 }
+
+.contextual-region.profile {
+  & > div.form-item:first-child {
+    display: none;
+  }
+}
