@@ -1,5 +1,5 @@
 .path-user {
-  padding: 80px 40px 40px 40px;
+  padding: 60px 40px 40px 40px;
   background-color: white;
 
   .forgot-password {
@@ -18,15 +18,21 @@
     }
   }
 
-  .dialog-off-canvas-main-canvas {
-    & > div:first-child {
+
+  .login-btn {
       padding-bottom: 15px;
       border-bottom: 1px solid $gray-700;
       a {
-        @extend .button;
+        @extend .txt-size-2;
+        text-decoration: underline;
+        font-weight: bold;
+
+        &:hover {
+            color: $gray-700;
+        }
       }
     }
-  }
+
 
   .region-content {
     margin-top: 20px;
@@ -40,26 +46,26 @@
     margin-top: 15px;
   }
 
+  .button.facebook {
+    background-color: #3b5998;
+    margin-right: 10px;
+
+    &:hover {
+      background-color: darken(#3b5998, 2%);
+    }
+  }
+
+  .button.google {
+    background-color: #d93025;
+
+    &:hover {
+      background-color: darken(#d93025, 2%);
+    }
+  }
+
   .dialog-off-canvas-main-canvas {
     & > .button {
-      margin-right: 10px;
       margin-left: 0;
-
-      &:nth-child(3) {
-        background-color: #3b5998;
-
-        &:hover {
-          background-color: darken(#3b5998, 2%);
-        }
-      }
-
-      &:nth-child(4) {
-        background-color: #d93025;
-
-        &:hover {
-          background-color: darken(#d93025, 2%);
-        }
-      }
     }
   }
 
