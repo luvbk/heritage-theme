@@ -20,8 +20,8 @@ html {
 
 body {
   @extend .font-body;
-  background: $body-color;
-  color: $base-color;
+  background: $gray-base;
+  color: $gray-base;
   font-weight: 400;
   line-height: 1.45;
   text-rendering: optimizeLegibility;
