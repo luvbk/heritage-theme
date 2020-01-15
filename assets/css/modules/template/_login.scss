@@ -170,13 +170,25 @@
   padding-bottom: 10px;
   border-bottom: 1px solid $gray-700;
 
-  a {
-    h3 {
-      color: inherit;
+  .teaser-link {
+    display: flex;
+    align-items: center;
+
+    .object-img {
+      width: 180px;
+      height: 180px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 100%;
+      margin-right: 20px;
+      background-color: $gray-200;
+      background-position: center;
     }
 
     &:hover {
-      color: $gray-base;
+      h3 {
+        color: inherit;
+      }
     }
   }
 }
