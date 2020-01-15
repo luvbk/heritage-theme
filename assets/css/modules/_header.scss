@@ -17,7 +17,7 @@ ul.menu {
   margin-bottom: 20px;
 }
 
-.menu--account {
+.region-content > .menu--account {
   width: 100%;
   margin-bottom: 20px;
 
@@ -81,17 +81,17 @@ ul.menu {
 
         &:before {
           content: "";
-          position: absolute;
-          top: 10px;
+          display: flex;
+          padding: 10px;
           margin: 0 auto;
-          width: 35px;
-          height: 21px;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          background-size: auto 21px;
-          background-repeat: no-repeat;
-          background-position: top center;
+          min-height: 74px;
+          text-align: center;
+          font-size: 10px;
+          font-weight: bold;
+          position: relative;
+          padding-top: 38px;
+          justify-content: center;
+          width: auto;
         }
       }
     }
