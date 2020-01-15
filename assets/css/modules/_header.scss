@@ -21,6 +21,10 @@ ul.menu {
   width: 100%;
   margin-bottom: 20px;
 
+  .contextual {
+    display: none;
+  }
+
   ul {
     display: flex;
     justify-content: space-between;

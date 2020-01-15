@@ -11,11 +11,11 @@ div[class*='col-'] {
 
 .clearfix:before,
 .clearfix:after {
-    content: ".";    
-    display: block;    
-    height: 0; 
-    opacity: 0;   
-    overflow: hidden; 
+    content: ".";
+    display: block;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
 }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; } /* IE < 8 */
@@ -31,7 +31,7 @@ div[class*='col-'] {
 
     @include media-breakpoint-up(sm) {
         column-count: 2;
-        column-gap: 30px;        
+        column-gap: 30px;
     }
 
     & > div {
@@ -63,22 +63,3 @@ div[class*='col-'] {
 // ------------------------------------------------------------
 // :: Header
 // ------------------------------------------------------------
-
-
-
-// Define the top padding for the main content depending on the header height
-
-.main-content-wrapper {
-    position: relative;
-    outline: transparent;
-    padding-top: 60px;
-    // margin-top: 100px; 
-
-    //  @include media-breakpoint-up(md) {
-    //     margin-top: 200px;       
-    // }
-}
-
-
-
-
