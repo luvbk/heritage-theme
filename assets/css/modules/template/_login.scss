@@ -184,6 +184,10 @@
       background-position: center;
     }
 
+    h3 {
+      color: $gray-700;
+    }
+
     &:hover {
       h3 {
         color: inherit;
