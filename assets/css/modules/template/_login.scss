@@ -60,14 +60,18 @@
               top: 50%;
               -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
+          }
 
-              &:hover {
-                background-image: url(images/icons/view-more-white-revert.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 12px;
-                color: white;
-              }
+          &:hover {
+            color: white;
+
+            &:before {
+              content: "";
+              background-image: url(images/icons/view-more-white-revert.svg);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 12px;
+            }
           }
         }
 
@@ -85,14 +89,17 @@
               top: 50%;
               -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
+          }
 
-              &:hover {
-                background-image: url(images/icons/view-more-white.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 12px;
-                color: white;
-              }
+          &:hover {
+            color: white;
+            &:before {
+              content: "";
+              background-image: url(images/icons/view-more-white.svg);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 12px;
+            }
           }
         }
 
