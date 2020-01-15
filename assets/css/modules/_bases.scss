@@ -21,3 +21,7 @@ img.svg {
 #block-frontend-primary-local-tasks {
 	margin-bottom: 10px;
 }
+
+#block-marquedusite {
+	@extend .h3;
+}
