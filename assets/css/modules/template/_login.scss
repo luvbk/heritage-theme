@@ -36,13 +36,21 @@
         position: relative;
         font-size: 16px;
         padding: 10px 16px 10px 30px;
+        background-color: $gray-200;
+        color: $gray-base;
+        border: 1px solid $gray-200;
+
+        &:hover {
+          color: white;
+          border: 1px solid $gray-base;
+        }
 
 
         &.login-btn {
           &:before {
             content: "";
               position: absolute;
-              background-image: url(images/icons/view-more-white-revert.svg);
+              background-image: url(images/icons/view-more-revert.svg);
               background-repeat: no-repeat;
               background-position: center;
               background-size: 12px;
@@ -52,6 +60,14 @@
               top: 50%;
               -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
+
+              &:hover {
+                background-image: url(images/icons/view-more-white-revert.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 12px;
+                color: white;
+              }
           }
         }
 
@@ -59,7 +75,7 @@
           &:before {
             content: "";
               position: absolute;
-              background-image: url(images/icons/view-more-white.svg);
+              background-image: url(images/icons/view-more.svg);
               background-repeat: no-repeat;
               background-position: center;
               background-size: 12px;
@@ -69,6 +85,14 @@
               top: 50%;
               -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
+
+              &:hover {
+                background-image: url(images/icons/view-more-white.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 12px;
+                color: white;
+              }
           }
         }
 

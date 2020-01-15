@@ -1,3 +1,4 @@
+jQuery(document).ready(function($){
 window.onresize = init;
 window.onload = init;
 init;
@@ -11,82 +12,24 @@ if ($(window).width() > 991) ofst = 120;
 
 function init()	{
       	if (window.matchMedia("(min-width:992px)").matches) {
-      		$('#header .search-icon').appendTo('.search-trigger-wrapper');
-      		$('#header .block-language').insertAfter('.main-nav nav');
+
         }
 
       	else {
-      		$('#header .block-language').insertAfter('.main-nav .menu');
-      		$('#header .search-icon').insertBefore('#header .toggle-wrapper')
+
         }
 
 
-        if (window.matchMedia("(min-width:1180px)").matches) {
-      		$('.page-footer-wrapper .external-credit').appendTo('.page-footer-wrapper');
 
-      		$(".sticky").stick_in_parent({
-		        offset_top: 60,
-		        inner_scrolling: false,
-
-		    });
-        }
-
-      	else {
-      		$('.page-footer-wrapper .external-credit').insertAfter('.credit .wysiwyg');
-
-      		$(".sticky").trigger("sticky_kit:detach");
-        }
 
 }
 
 
-// SlideToggle Function
 
- function toggleFunction() {
-
-    var toggleButton = $(".toggle-button");
-    toggleHeightclose = "120px";
-
-    toggleButton.click(function(e) {
-    	var $this= $(this);
-    	var toggleHeight = $this.closest('.toggle-container-wrapper').find(".inner-height").innerHeight();
-
-    	if ($this.hasClass('is-on')) {
-    		$this.removeClass("is-on");
-      		$this.closest('.toggle-container-wrapper').find(".toggle-container").css("height", toggleHeightclose);
-      		$this.closest('.toggle-container-wrapper').removeClass("is-open");
-      		$('html, body').animate({
-	            scrollTop: $this.closest('.toggle-container-wrapper').offset().top - 160
-	          }, 200);
-    	} else {
-    		$this.addClass("is-on");
-		    $this.closest('.toggle-container-wrapper').find(".toggle-container").css("height", toggleHeight);
-		    $this.closest('.toggle-container-wrapper').addClass("is-open");
-    	}
-
-
-    e.preventDefault();
-  });
-
-}
-
-
-function userToggle() {
-
-	$('.team-wrapper .user-toggle').click(function(e) {
-    	var $this= $(this);
-    	$this.toggleClass('is-on');
-    	$this.next('.wysiwyg').slideToggle(400).toggleClass('is-open');
-
-    e.preventDefault();
-  });
-}
 
 
 function script_callback() {
 
-	toggleFunction();
-	userToggle();
 
 	/*
 	* Replace all SVG images with inline SVG
@@ -155,9 +98,6 @@ function script_callback() {
 
 
 
-// Init Function
-
-$( document ).ready(function() {
 
 	// Call Fonction
 	script_callback();
