@@ -1,5 +1,5 @@
 .path-user {
-  padding: 40px;
+  padding: 80px 40px 40px 40px;
   background-color: white;
 
   .forgot-password {
@@ -20,8 +20,10 @@
 
   .dialog-off-canvas-main-canvas {
     & > div:first-child {
+      padding-bottom: 15px;
+      border-bottom: 1px solid $gray-base;
       a {
-        @extend .txt-size;
+        @extend .txt-size-2;
         text-decoration: underline;
         font-weight: bold;
 
@@ -46,14 +48,14 @@
 
   .dialog-off-canvas-main-canvas {
     & > .button {
-      margin-right: 15px;
+      margin-right: 10px;
       margin-left: 0;
 
       &:nth-child(3) {
         background-color: #3b5998;
 
         &:hover {
-          background-color: darken(#3b5998, 5%);
+          background-color: darken(#3b5998, 2%);
         }
       }
 
@@ -61,13 +63,13 @@
         background-color: #d93025;
 
         &:hover {
-          background-color: darken(#d93025, 5%);
+          background-color: darken(#d93025, 2%);
         }
       }
     }
   }
 
-  .user-login-form {
+
     .form-item {
       margin-bottom: 10px;
 
@@ -81,7 +83,7 @@
         margin-top: 5px;
         @extend .small-size;
       }
-    }
+    
   }
 
 }
