@@ -171,13 +171,15 @@
   border-bottom: 1px solid $gray-700;
 
   .inventaire {
-    font-weight: 600;
     text-transform: uppercase;
+  }
+
+  .teaser-info {
+    padding-top: 5px;
   }
 
   .teaser-link {
     display: flex;
-    align-items: center;
 
     .object-img {
       width: 60px;
@@ -191,6 +193,7 @@
 
     h3 {
       color: $gray-700;
+      margin-bottom: 5px;
     }
 
     &:hover {

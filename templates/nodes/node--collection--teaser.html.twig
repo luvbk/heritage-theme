@@ -1,9 +1,12 @@
 <div class="like-teaser">
-  <div class="inventaire">{{ node.type.entity.label }} </div>
+
   <a href="{{ content.field_url_fr.0 }}" class="teaser-link" target="_parent">
     <div class="object-img" style="background-image:url({{ content.field_image.0 }})">  </div>
-    <h3>{{ label }}</h3>
+    <div class="teaser-info">
+      <div class="inventaire small-size">{{ node.type.entity.label }} </div>
+      <h3>{{ label }}</h3>
+      <div class="wysiwyg small"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra mauris ipsum, ultrices rutrum urna gravida quis. Sed eget auctor odio. </p></div>
+    </div>
   </a>
-  <div class="wysiwyg small"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra mauris ipsum, ultrices rutrum urna gravida quis. Sed eget auctor odio. </p></div>
-</a>
+
 </div>
