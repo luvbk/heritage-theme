@@ -28,7 +28,7 @@ img.svg {
 
 
 .main-content-wrapper {
-	min-height: calc(100vh - 63px);
+	min-height: calc(100vh - 113px);
 	width: 100%;
 	position: relative;
 	padding: 150px 0 100px 0;
@@ -48,6 +48,7 @@ img.svg {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	filter: grayscale(1);
 
 	&:after {
 		content: "";
