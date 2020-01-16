@@ -177,7 +177,7 @@
 
   &.comment {
     .comment-wrapper {
-      padding-left: 120px;
+      padding-left: 100px;
       margin-bottom: 10px;
       width: 100%;
     }
@@ -197,9 +197,10 @@
 
   .teaser-link {
     display: flex;
+    flex-wrap: wrap;
 
     .object-img {
-      width: 100px;
+      width: 80px;
       margin-right: 20px;
       text-align: center;
 
@@ -207,6 +208,10 @@
         display: block;
         margin: 0 auto;
       }
+    }
+
+    .teaser-info {
+      width: calc(100% - 100px);
     }
 
     h3 {
