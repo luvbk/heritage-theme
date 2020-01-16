@@ -175,7 +175,25 @@
     margin-bottom: 5px;
   }
 
+  &.comment {
+    .comment-wrapper {
+      padding-left: 120px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
 
+    .teaser-link  {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .edit-link {
+    a {
+      @extend .txt-size;
+      text-decoration: underline;
+    }
+  }
 
   .teaser-link {
     display: flex;
@@ -183,6 +201,12 @@
     .object-img {
       width: 100px;
       margin-right: 20px;
+      text-align: center;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
     }
 
     h3 {
