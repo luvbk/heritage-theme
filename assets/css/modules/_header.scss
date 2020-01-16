@@ -124,6 +124,13 @@ ul.menu {
         font-weight: bold;
         position: relative;
 
+        @include media-breakpoint-down(xs) {
+          min-height: 70px;
+          overflow: hidden;
+          width: 60px;
+          text-indent: -9999px;
+        }
+
 
         &:before {
           content: "";
