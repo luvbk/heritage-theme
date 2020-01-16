@@ -44,6 +44,11 @@ ul.menu {
       background-color: $gray-100;
       width: calc(100% + 80px);
       left: -40px;
+
+      @include media-breakpoint-down(xs) {
+        width: calc(100% + 40px);
+        left: -20px;
+      }
     }
 
     li {
