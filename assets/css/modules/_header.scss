@@ -49,6 +49,12 @@ ul.menu {
           &:before {
               background-image: url(images/icons/like.svg);
           }
+
+          &:hover, &.is-active {
+            &:before {
+              background-image: url(images/icons/like-red.svg);
+            }
+          }
         }
       }
 
@@ -56,6 +62,12 @@ ul.menu {
         a {
           &:before {
               background-image: url(images/icons/bookmark.svg);
+          }
+
+          &:hover, &.is-active {
+            &:before {
+              background-image: url(images/icons/bookmark-yellow.svg);
+            }
           }
         }
       }
@@ -65,6 +77,12 @@ ul.menu {
           &:before {
               background-image: url(images/icons/comment.svg);
           }
+
+          &:hover, &.is-active {
+            &:before {
+              background-image: url(images/icons/comment-green.svg);
+            }
+          }
         }
       }
 
@@ -73,6 +91,12 @@ ul.menu {
           &:before {
               background-image: url(images/icons/account.svg);
           }
+
+          &:hover, &.is-active {
+            &:before {
+              background-image: url(images/icons/account-purple.svg);
+            }
+          }
         }
       }
 
@@ -80,6 +104,12 @@ ul.menu {
         a {
           &:before {
               background-image: url(images/icons/logout.svg);
+          }
+
+          &:hover, &.is-active {
+            &:before {
+              background-image: url(images/icons/logout-grey.svg);
+            }
           }
         }
       }
