@@ -67,8 +67,8 @@ body {
 	width: 100%;
 
 	@include media-breakpoint-down(xs) {
-		width: calc(100% + 40px);
-		padding: 23px 40px 100px 40px;
+		width: calc(100%);
+		padding: 23px 40px 140px 40px;
 	}
 }
 
