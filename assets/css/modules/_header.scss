@@ -17,7 +17,7 @@ ul.menu {
   color: $gray-base !important;
   margin-bottom: 25px;
 
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-only(xs) {
     font-size: 22px !important;
     line-height: 24px !important;
   }
@@ -41,11 +41,11 @@ ul.menu {
       content: "";
       position: absolute;
       height: 100%;
-      background-color: red;
+      background-color: $gray-100;
       width: calc(100% + 80px);
       left: -40px;
 
-      @include media-breakpoint-down(xs) {
+      @include media-breakpoint-only(xs) {
         width: calc(100% + 40px);
         left: -20px;
       }
@@ -134,7 +134,7 @@ ul.menu {
         font-weight: bold;
         position: relative;
 
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-only(xs) {
           min-height: 70px;
           overflow: hidden;
           width: 40px;
