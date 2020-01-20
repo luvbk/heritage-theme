@@ -1,6 +1,14 @@
 .path-user {
   background-color: white;
 
+  .login-facebook {
+    margin-top: 20px;
+
+    & > h4 {
+      @extend .txt-size;
+    }
+  }
+
   .forgot-password {
     padding-top: 25px;
 
@@ -224,13 +232,5 @@
         color: inherit;
       }
     }
-  }
-}
-
-.login-facebook {
-  margin-top: 20px;
-  
-  & > h4 {
-    @extend .txt-size;
   }
 }
