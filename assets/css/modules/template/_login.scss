@@ -226,3 +226,11 @@
     }
   }
 }
+
+.login-facebook {
+  margin-top: 20px;
+  
+  & > h4 {
+    @extend .txt-size;
+  }
+}
