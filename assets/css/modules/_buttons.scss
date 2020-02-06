@@ -41,3 +41,46 @@ input.button, a.button, button, .btn-style {
 
 
 }
+
+.btn-print {
+	display: none;
+}
+
+.path-mes-likes, .path-mes-bookmarks, .path-mes-commentaires {
+	.btn-print {
+		display: block;
+	}
+}
+
+
+@media print {
+  #menu, #footer, aside {
+    display:none;
+  }
+
+
+
+	.region-content>.menu--account ul li {
+		display: none;
+
+		&.menu-item--active-trail {
+			display: block;
+
+			a {
+				display: inline-block;
+				padding: 0 0 0 0px;
+				margin: 0 auto;
+				min-height: 0;
+				text-align: center;
+				font-size: 20px;
+				font-weight: bold;
+				position: relative;
+				color: $gray-700;
+
+				&:before {
+						display: none;
+				}
+			}
+		}
+	}
+}
