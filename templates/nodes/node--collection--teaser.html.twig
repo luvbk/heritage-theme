@@ -8,8 +8,8 @@
     </div>
   </a>
   {% if 'mes-likes' in path('<current>') %}
-    <a href="{{ "https://heritage.bienavous-dev.net/deleteLike/" ~ render_var(content.field_id.0) }}">Je n'aime plus</a>
+    <a href="{{ "https://heritage.bienavous-dev.net/deleteLike/" ~ render_var(content.field_id.0) }}">{% trans %}Unlike{% endtrans %}</a>
   {% elseif 'mes-bookmarks' in path('<current>') %}
-    <a href="{{ "https://heritage.bienavous-dev.net/deleteBookmark/" ~ render_var(node.id) }}">Retirer de mes bookmarks</a>
+    <a href="{{ "https://heritage.bienavous-dev.net/deleteBookmark/" ~ render_var(node.id) }}">{% trans %}Remove from my bookmarks{% endtrans %}</a>
   {% endif %}
 </div>
