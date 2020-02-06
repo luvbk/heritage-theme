@@ -54,9 +54,14 @@ input.button, a.button, button, .btn-style {
 
 
 @media print {
-  #menu, #footer, aside {
-    display:none;
-  }
+
+	#block-marquedusite, {
+		font-size: 18px !important;
+	}
+
+	.btn-print {
+		display: none;
+	}
 
 
 
