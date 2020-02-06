@@ -52,6 +52,9 @@ input.button, a.button, button, .btn-style {
 	}
 }
 
+.views-exposed-form .form-submit {
+	margin-top: 10px;
+}
 
 @media print {
 
@@ -59,8 +62,8 @@ input.button, a.button, button, .btn-style {
 		font-size: 18px !important;
 	}
 
-	.btn-print {
-		display: none;
+	.btn-print, .views-exposed-form {
+		display: none !important;
 	}
 
 
