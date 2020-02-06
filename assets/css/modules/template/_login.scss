@@ -182,6 +182,10 @@
     margin-bottom: 0;
   }
 
+  .clearfix:after {
+    display: none;
+  }
+
   .inventaire {
     text-transform: uppercase;
     margin-bottom: 5px;
