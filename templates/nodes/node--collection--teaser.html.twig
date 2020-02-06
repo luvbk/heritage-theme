@@ -8,7 +8,7 @@
     </div>
   </a>
   {% if 'mes-likes' in path('<current>') %}
-    <a href="{{ "https://heritage.bienavous-dev.net/deleteLike/" ~ render_var(content.field_id.0) }}" class="dislike">{% trans %}Unlike{% endtrans %}</a>
+    <a href="{{ "https://heritage.bienavous-dev.net/deleteLike/" ~ render_var(content.field_id.0) }}" class="dislike">{% trans %}Remove like{% endtrans %}</a>
   {% elseif 'mes-bookmarks' in path('<current>') %}
     <a href="{{ "https://heritage.bienavous-dev.net/deleteBookmark/" ~ render_var(node.id) }}" class="dislike">{% trans %}Remove from my bookmarks{% endtrans %}</a>
   {% endif %}
