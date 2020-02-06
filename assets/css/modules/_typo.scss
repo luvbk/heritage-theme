@@ -118,6 +118,17 @@ h6, .h6 {
 	font-weight: bold;
 }
 
+.dislike {
+	@extend .txt-size;
+	text-decoration: underline;
+	color: $gray-700;
+	margin-left: 80px;
+
+	&:hover {
+		color: $gray-base;
+	}
+}
+
 .chapeau-size {
 	@extend .h4;
 }
