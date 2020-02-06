@@ -178,6 +178,10 @@
   padding-bottom: 10px;
   border-bottom: 1px solid $gray-700;
 
+  .field--name-body {
+    margin-bottom: 0;
+  }
+
   .inventaire {
     text-transform: uppercase;
     margin-bottom: 5px;
