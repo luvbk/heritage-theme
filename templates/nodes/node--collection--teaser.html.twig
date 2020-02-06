@@ -4,7 +4,12 @@
     <div class="teaser-info">
       <div class="inventaire small-size">{{ node.type.entity.label }} </div>
       <h3>{{ label }}</h3>
-      <div class="wysiwyg small"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra mauris ipsum, ultrices rutrum urna gravida quis. Sed eget auctor odio. </p></div>
+      <div class="wysiwyg small"><p>{{ content.body }}</p></div>
     </div>
   </a>
+  {% if 'mes-likes' in path('<current>') %}
+    <a href="{{ "https://heritage.bienavous-dev.net/deleteLike/" ~ render_var(content.field_id.0) }}">Je n'aime plus</a>
+  {% elseif 'mes-bookmarks' in path('<current>') %}
+    <a href="{{ "https://heritage.bienavous-dev.net/deleteBookmark/" ~ render_var(node.id) }}">Retirer de mes bookmarks</a>
+  {% endif %}
 </div>
